@@ -1,0 +1,137 @@
+ubuntu@yjh-master:~/homework$ ls
+details-service.yaml  details.yaml  frontpage-service.yaml  frontpage.yaml  ingress-class.yaml  ingress.yaml
+ubuntu@yjh-master:~/homework$ vi frontpage.yaml 
+ubuntu@yjh-master:~/homework$ vi frontpage.yaml 
+ubuntu@yjh-master:~/homework$ vi frontpage-service.yaml 
+ubuntu@yjh-master:~/homework$ vi frontpage-service.yaml 
+ubuntu@yjh-master:~/homework$ clear
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ubuntu@yjh-master:~/homework$ ls
+details-service.yaml  details.yaml  frontpage-service.yaml  frontpage.yaml  ingress-class.yaml  ingress.yaml
+ubuntu@yjh-master:~/homework$ vi ingress.yaml 
+ubuntu@yjh-master:~/homework$ vi ingress-class.yaml 
+ubuntu@yjh-master:~/homework$ vi details
+ubuntu@yjh-master:~/homework$ vi details.yaml 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: details
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: details
+  template:
+    metadata:
+      labels:
+        app: details
+    spec:
+      containers:
+      - name: details
+        image: gofiddlersgreen/flask-msa-details
+        ports:
+        - containerPort: 80

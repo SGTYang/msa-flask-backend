@@ -4,10 +4,10 @@ WORKDIR /
 COPY requirements.txt ./
 RUN pip install -r requirements.txt
 
-COPY details.py /microservices/
-COPY requirements.txt /microservices/
+COPY details.py /app/
+COPY requirements.txt /app/
 
-WORKDIR /microservices
-EXPOSE 4321
+WORKDIR /app
+EXPOSE 80
 
-CMD ["python", "details.py", "4321"]
+CMD ["python", "details.py", "80"]
